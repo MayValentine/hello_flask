@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -21,4 +21,6 @@ def romano(numero):
 def doble(numero):
     return str(numero * 2)
 
-
+@app.route("/primerhtml")
+def primerhtml():
+    return render_template("hola.html")
